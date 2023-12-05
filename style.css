@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Roboto Mono";
+    background: url('cal.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-image: linear-gradient(109.6deg, rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%);
+
+}
+
+#calculator {
+    margin: auto;
+    margin-top: 8%;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 10px black;
+
+}
+
+#result-value {
+    margin-right: 5px;
+}
+
+#detail {
+    margin-right: 40px;
+}
+
+header {
+    padding: 20px 0 20px 20px;
+    background: DarkViolet;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: right;
+}
+
+header #detail {
+    font-size: 1em;
+}
+
+header #result {
+    font-size: 2em;
+    color: black;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-left: 23px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+header span {
+    margin-left: .5em;
+    float: left;
+}
+
+main {
+    height: 100%;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main button {
+    font-size: 1.2em;
+    font-family: "Roboto Mono";
+    width: 18%;
+    margin: 5px;
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    background: white;
+    box-shadow: 1px 1px 3px purple;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+main button:hover {
+    background: #cdcdcd;
+}
+
+main button:focus {
+    outline: none;
+}
+
+main button:active {
+    box-shadow: 0 0 10px #cdcdcd;
+}
+
+#keys {
+    padding: 4px;
+}
+
+#c {
+    background-color: #e62121;
+}
+
+#c:hover {
+    background-color: #ff3e3e;
+}
+
+
+.animated-symbol {
+    position: absolute;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    color: white;
+    animation-iteration-count: infinite;
+}
+
+/* Define animations for each symbol */
+.animated-symbol.plus {
+    animation-name: animatePlus;
+    left: 380px;
+    /* Adjust left position for + symbol */
+    top: 150px;
+    /* Adjust top position for + symbol */
+}
+
+.animated-symbol.minus {
+    animation-name: animateMinus;
+    right: 380px;
+    /* Adjust right position for - symbol */
+    top: 150px;
+    /* Adjust top position for - symbol */
+}
+
+.animated-symbol.times {
+    animation-name: animateTimes;
+    left: 380px;
+    /* Adjust left position for * symbol */
+    bottom: 240px;
+    /* Adjust bottom position for * symbol */
+}
+
+.animated-symbol.divide {
+    animation-name: animateDivide;
+    right: 380px;
+    /* Adjust right position for / symbol */
+    bottom: 240px;
+    /* Adjust bottom position for / symbol */
+}
+
+/* Keyframes for animations */
+@keyframes animatePlus {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(20);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes animateMinus {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(20);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes animateTimes {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(18);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes animateDivide {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(20);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
